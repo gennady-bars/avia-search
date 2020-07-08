@@ -1,0 +1,36 @@
+.FlightCard {
+  margin-bottom: 1rem;
+  border: 1px solid gray;
+}
+
+.FlightCard:hover {
+  border: 1px solid gray;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);;
+}
+
+.FlightCard .cardHeader {
+  display: flex;
+  justify-content: flex-end;
+  text-align: end;
+  background-color: #405568;
+  color: white;
+  padding-right: 1rem;
+}
+
+.FlightCard .time {
+  display: flex;
+  justify-content: space-between;
+}
+
+.FlightCard .cardBody {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.FlightCard .cardButton {
+  text-align: center;
+  color: white;
+  background-color: red;
+  padding: 0.5rem;
+  cursor: pointer;
+}

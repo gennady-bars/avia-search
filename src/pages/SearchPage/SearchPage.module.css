@@ -1,0 +1,11 @@
+.SearchPage {
+  padding: 1rem;
+}
+
+
+@media screen and (max-width: 800px)  {
+  .SearchPage {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,21 @@
+.FilterPannel {
+  position: fixed;
+  border: gray solid 1px;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  width: 230px;
+  
+}
+
+.FilterPannel label {
+  color: gray;
+}
+
+@media screen and (max-width: 800px)  {
+  .FilterPannel {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    width: 100vw;
+  }
+}

@@ -1,0 +1,10 @@
+.SearchResults {
+  margin-left: 250px;
+}
+
+@media screen and (max-width: 800px)  {
+  .SearchResults {
+    /* margin-top: 240px; */
+    margin-left: 0;
+  }
+}
