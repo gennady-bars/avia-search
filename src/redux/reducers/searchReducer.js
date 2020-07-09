@@ -2,12 +2,16 @@ import {
   SEARCH_BY_CITY,
   SEARCH_BY_CITY_ERROR,
   SEARCH_BY_CITY_LOADING,
+  SEARCH_FILTER,
+  SEARCH_SORTED,
 } from "../actions/actionTypes";
 
 const initialState = {
   flights: null,
-  loading: false,
+  loading: true,
   error: null,
+  filter: {},
+  sorted: "",
 };
 
 const searchReducer = (state = initialState, action) => {
@@ -15,9 +19,10 @@ const searchReducer = (state = initialState, action) => {
     case SEARCH_BY_CITY:
       return {
         ...state,
+        flights: action.flights,
         loading: false,
         error: null,
-        flights: action.flights,
+        sorted: "",
       };
     case SEARCH_BY_CITY_ERROR:
       return {
@@ -30,6 +35,16 @@ const searchReducer = (state = initialState, action) => {
         ...state,
         loading: true,
         error: null,
+      };
+    case SEARCH_FILTER:
+      return {
+        ...state,
+        filter: { ...state.filter, ...action.filter },
+      };
+    case SEARCH_SORTED:
+      return {
+        ...state,
+        sorted: action.sorted,
       };
     default:
       return state;
